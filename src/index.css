@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0b1120;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars for boardroom feeds */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Gold glow utilities */
+.glow-gold {
+  box-shadow: 0 0 25px -4px rgba(212, 175, 55, 0.35);
+}
+
+.glow-gold-subtle {
+  box-shadow: 0 0 15px -3px rgba(212, 175, 55, 0.2);
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.border-gold {
+  border-color: #d4af37;
+}
+
+@keyframes speakerGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px 2px rgba(229, 169, 60, 0.45), inset 0 0 15px rgba(229, 169, 60, 0.2);
+    border-color: #e5a93c;
+  }
+  50% {
+    box-shadow: 0 0 32px 8px rgba(229, 169, 60, 0.8), inset 0 0 25px rgba(229, 169, 60, 0.4);
+    border-color: #fbbf24;
+  }
+}
+
+.speaker-active-glow {
+  animation: speakerGlow 2s infinite ease-in-out;
+}
+
+/* Dynamic Shark Audio Wave Animation */
+@keyframes audioWaveBar1 {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+@keyframes audioWaveBar2 {
+  0%, 100% { height: 14px; }
+  50% { height: 5px; }
+}
+
+@keyframes audioWaveBar3 {
+  0%, 100% { height: 6px; }
+  50% { height: 20px; }
+}
+
+@keyframes audioWaveBar4 {
+  0%, 100% { height: 16px; }
+  50% { height: 6px; }
+}
+
+@keyframes audioWaveBar5 {
+  0%, 100% { height: 5px; }
+  50% { height: 18px; }
+}
+
+.animate-wave-1 {
+  animation: audioWaveBar1 0.75s ease-in-out infinite;
+}
+
+.animate-wave-2 {
+  animation: audioWaveBar2 0.65s ease-in-out infinite 0.15s;
+}
+
+.animate-wave-3 {
+  animation: audioWaveBar3 0.85s ease-in-out infinite 0.25s;
+}
+
+.animate-wave-4 {
+  animation: audioWaveBar4 0.7s ease-in-out infinite 0.1s;
+}
+
+.animate-wave-5 {
+  animation: audioWaveBar5 0.9s ease-in-out infinite 0.3s;
+}

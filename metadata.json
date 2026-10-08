@@ -1,0 +1,6 @@
+{
+  "name": "Shark Tank Simulator",
+  "description": "Pitch your startup to an elite panel of ruthless AI investors, defend your business model, and survive the boardroom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
